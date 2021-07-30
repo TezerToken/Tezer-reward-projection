@@ -1,11 +1,8 @@
 <template>
 <div>
   <h1 class="header-msg">USDT Rewards projection, still under heavy development!</h1>
-  <trend
-  :data="[0, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0]"
-  :gradient="['#6fa8dc', '#42b983', '#2c3e50']"
-  auto-draw
-  smooth/>
+  <h3 class="credits-msg">Tezer telegram: <a href="https://t.me/TezerToken">@TezerToken</a></h3>
+
 
   <div class="container">
 
@@ -26,28 +23,23 @@
               role="alert">
               Conside that, under current parameters, to receive the rewards, you should own at least 500 TEZER.
           </b-notification>
-
-        
       </template>
     </div>
 
-    <div class="calculations">
-
     <div class="main-container">
-    <div class="cards">
-    <div class="card card-1">
-      <h2 class="card__title">Daily Rewards: {{getDailyRewards(volume, holdings)}} USDT</h2>
-    </div>
-    <div class="card card-2">
-      <h2 class="card__title">Monthly Rewards: {{getMonthlyRewards(volume, holdings)}} USDT</h2>
-    </div>
-    <div class="card card-3">
-      <h2 class="card__title">Yearly Rewards: {{getYearlyRewards(volume, holdings)}} USDT</h2>
+      <div class="cards">
+        <div class="card card-1">
+          <h2 class="card__title">Daily Rewards: {{getDailyRewards(volume, holdings)}} <img src="../assets/tether_logo.svg"/></h2>
+        </div>
+      <div class="card card-2">
+        <h2 class="card__title">Monthly Rewards: {{getMonthlyRewards(volume, holdings)}} <img src="../assets/tether_logo.svg"/></h2>
+      </div>
+      <div class="card card-3">
+        <h2 class="card__title">Yearly Rewards: {{getYearlyRewards(volume, holdings)}} <img src="../assets/tether_logo.svg"/></h2>
+      </div>
     </div>
   </div>
-</div>
         
-    </div>
   </div>
 </div>
 </template>
@@ -106,11 +98,11 @@
     display: grid;
     grid-template-columns: 0.5fr 0.5fr;
     column-gap: 35%;
-    margin-top: 20px;
+    margin-top: 150px;
   }
 
   .inputs {
-    margin-top: 90px;
+    margin-top: 40px;
   }
 
   .header-msg {
@@ -119,6 +111,15 @@
     color: wheat;
     font-weight: 700;
     font-size: 2rem;
+  }
+
+  .credits-msg {
+    display: flex;
+    justify-content: center;
+    color: wheat;
+    font-style: italic;
+    font-size: 1rem;
+    margin-top: 10px;
   }
 
   * {
@@ -132,11 +133,6 @@ body {
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-.main-container {
-
-}
-
-
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -146,10 +142,10 @@ body {
 .card {
   margin: 10px;
   padding: 10px;
-  width: 250px;
+  width: 300px;
   min-height: 10px;
   display: grid;
-  grid-template-rows: 10px 30px 1fr 50px;
+  grid-template-rows: 5px 20px 0.5fr 20px;
   border-radius: 20px;
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
   transition: all 0.2s;
@@ -183,20 +179,10 @@ body {
   width: 100%;
 }
 
-.card__exit {
-  grid-row: 1/2;
-  justify-self: end;
-}
-
-.card__icon {
-  grid-row: 2/3;
-  font-size: 30px;
-}
-
 .card__title {
-  grid-row: 4/4;
+  grid-row: 3/4;
   font-weight: 400;
-  color: #ffffff;
+  color:black;
 }
 
 .card__apply {
@@ -217,6 +203,12 @@ body {
 .card-3 {
   background: radial-gradient(#76b2fe, #b69efe);
 }
+
+img {
+  width: 25px;
+  height: 25px;
+}
+
 
 
 /* RESPONSIVE */
