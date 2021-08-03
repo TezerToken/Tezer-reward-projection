@@ -14,7 +14,9 @@
     "firebase": "^8.8.1",
     "firebase-tools": "^9.16.0",
     "vue": "^2.6.11",
-    "vuetrend": "^0.3.4"
+    "vue-metamask": "^2.0.3",
+    "vuetrend": "^0.3.4",
+    "web3": "^1.5.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

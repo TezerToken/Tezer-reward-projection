@@ -1,19 +1,21 @@
 <template>
   <div>
     <Navbar />
-    <RewardsUpdated />
+    <CurrentRewards />
   </div>
 </template>
 
 <script>
-import RewardsUpdated from './components/RewardsUpdated.vue'
+//import RewardsUpdated from './components/RewardsUpdated.vue'
 import Navbar from './components/Navbar.vue'
+import CurrentRewards from './components/CurrentRewards.vue'
 
 export default {
   name: 'App',
   components: {
-    RewardsUpdated,
-    Navbar
+    //RewardsUpdated,
+    Navbar,
+    CurrentRewards
   }
 
 }
